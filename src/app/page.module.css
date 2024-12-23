@@ -1,0 +1,133 @@
+.header{
+    gap:"30px";
+    width: 100%;
+}
+
+.telbuy{
+    width: 1188px;
+    height: 251px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+.telbuyr{
+    width: 870px;
+    height: 251px;
+    background-color: rgba(40, 167, 69, 1);
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+.telbuytxt{
+    width: 60%;
+    margin: auto;
+}
+.telbuytxt h1{
+    font-weight: 800;
+    font-size: 48px;
+    padding-right: 50px;
+}
+.telbuytxt h4{
+    font-weight: 400;
+    font-size: 32px;
+    padding-right:50px;
+
+}
+.buymanimg{
+    width: 40%;
+}
+.manimg{
+    width: 308px;
+    height: 225px;
+}
+.telbuyl{
+    margin: auto;
+}
+.calling{
+    display: flex;
+    flex-direction: row;
+}
+.telimg{
+    width: 24px;
+    height: 18px;
+    padding-right: 5px;
+}
+.moreinfo{
+    width: 175px;
+    height: 41px;
+    background-color: rgba(16, 65, 27, 1);
+    border-radius: 9px;
+    margin-top: 20px;
+    color: #fff;
+}
+.futures{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    gap: 30px;
+    height: 115px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.futureskids{
+    width: 331px;
+    height: 109px;
+    display: flex;
+    flex-direction: row;
+}
+.futuresimages{
+    width: 120px;
+    height: 110px;
+}
+.futurestxt{
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+.futurestxt h3{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 46px;
+}
+.futurestxt h5{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+}
+.whytorino{
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+}
+.whytxt{
+    width: 50%;
+}
+.whytorino h3{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 62px;
+}
+.whytorino h4{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+}
+.whytorino h5{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 44px;
+    width: 517px;
+    height: 265px;
+}
+.slider {
+    width: 50%;
+    height: 480px;
+    margin-bottom: 30px;
+  }

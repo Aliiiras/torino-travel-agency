@@ -1,0 +1,11 @@
+.sliderContainer {
+    margin-bottom: 30px;
+  }
+  
+  .slideImage {
+    display: block;
+    width: 390px;
+    height: 479px;
+    border-radius: 20px;
+    }
+  

@@ -1,0 +1,63 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 ستون مساوی */
+    gap: 15; /* فاصله بین ستون‌ها و ردیف‌ها */
+    padding: 16px; /* فضای داخلی کادر */
+    width: 1265px;
+    margin: auto;
+  }
+.main{
+    width: 278px;
+    height: 277px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.placeimg{
+    height: 160px;
+    width: 279px;
+}
+.reserve{
+    border-radius: 8px;
+    background-color: rgba(40, 167, 69, 1);
+    color: #ffff;
+    width: 64px;
+    height: 25px;
+}
+.endsector{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.price{
+    color: #009ECA;
+}
+.price span{
+    color: #282828CC;
+}
+.title{
+    color: rgba(0, 0, 0, 1);
+    font-size: 22px;
+    line-height: 26px;
+}
+.options{
+    color: rgba(40, 40, 40, 0.7);
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+}
+.firstsector{
+    padding: 10px;
+}
+.leveler{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.leveler h2{
+    text-align: right;
+    
+}

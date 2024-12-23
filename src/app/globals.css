@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@font-face {
+  font-family: 'YekanBakh';
+  src: url('../app/fonts/YekanBakh-Regular.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'YekanBakh-Heavy';
+  src: url('../app/fonts/YekanBakh-Heavy.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  font-family: 'YekanBakh', 'YekanBakh-Heavy', sans-serif;
+}
+.custom-calendar .rmdp-container {
+  @apply bg-gray-50 rounded-lg shadow-md; /* پس‌زمینه و ظاهر */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.custom-calendar .rmdp-day span {
+  @apply text-gray-700 hover:text-white hover:bg-transparent rounded-md; /* روزها */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.custom-calendar .rmdp-arrow-container {
+  @apply bg-blue-500 w-7 h-7 px-4 py-2 rounded-lg hover:bg-blue-600 text-white  !important; /* دکمه‌ها */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}

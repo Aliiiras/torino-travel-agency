@@ -4,9 +4,8 @@ import { useState } from "react";
 import OtpInput from "react18-input-otp";
 
 import { useCheckOtp } from "@/core/services/mutations";
-import { setCookie } from "@/core/utils/cookie";
 
-function CheckOTPForm({ mobile, setStep, setIsOpen }) {
+function CheckOTPForm({ mobile, setStep, setIsOpen, backToSendOTP }) {
   const [code, setCode] = useState("");
 
   const { isPending, mutate } = useCheckOtp();
@@ -19,9 +18,7 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
     mutate(
       { mobile, code },
       {
-        onSuccess: (data) => {
-          setCookie("accessToken", data?.data?.accessToken, 30);
-          setCookie("refreshToken", data?.data?.refreshToken, 365);
+        onSuccess: async (data) => {
           setIsOpen(false);
           setStep(1);
         },
@@ -38,6 +35,7 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
 
   return (
     <div className="flex flex-col w-[358px] h-[362px] bg-white rounded-[20px] shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] p-6">
+      <button onClick={backToSendOTP}>backk</button>
       <h4 className="text-xl font-bold text-center">کد تایید را وارد کنید.</h4>
       <form
         className="flex flex-col justify-end gap-10 flex-1"

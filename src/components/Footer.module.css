@@ -1,0 +1,76 @@
+.footersplitor{
+    width: 75%;
+    margin: auto;
+}
+.images{
+    width: 50px;
+    height: 50px;
+}
+.footer{
+    width: 75%;
+    height: 290px;
+    margin: 20px auto  20px auto;
+    display: flex;
+    gap: 40px;
+}
+.contactsecfooter{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.rightsecfooter{
+    display: flex;
+    flex-direction: column;
+}
+.rightsecfooter h3{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 37px;
+}
+.rightsecfooter a{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+}
+.leftsecfooter{
+    display: flex;
+    flex-direction: column;
+}
+.leftsecfooter h3{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 37px;
+}
+.leftsecfooter a{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+.supportsecfooter{
+    width: 50%;
+    direction: ltr;
+}
+.logotel{
+    margin-top: 30px;
+}
+.logotel h4{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.logotel Image{
+    width: 200px;
+}
+.imgsupportfooter{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.rightssplitor{
+    width: 100%;
+    margin: auto;
+}
+.rights{
+    margin: 8px;
+    text-align: center;
+}

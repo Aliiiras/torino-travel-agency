@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { useSendOtp } from "@/core/services/mutations";
 import { isValidMobile } from "@/core/utils/validation";
 
-function SendOTPForm({ mobile, setMobile, setStep }) {
+function SendOTPForm({ mobile, setMobile, setStep,onClose }) {
   const [error, setError] = useState("");
 
   const { isPending, mutate } = useSendOtp();
@@ -34,7 +34,13 @@ function SendOTPForm({ mobile, setMobile, setStep }) {
   };
 
   return (
-    <div className="flex flex-col w-[358px] h-[362px] bg-white rounded-[20px] shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] p-6">
+    <div className="relative flex flex-col w-[358px] h-[362px] bg-white rounded-[20px] shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] p-6">
+      <button
+          onClick={onClose}
+          className="absolute top-2 left-2 bg-gray-300 text-white rounded-md w-8 h-8 flex items-center justify-center"
+        >
+          x
+        </button>
       <h4 className="text-xl font-bold text-center">ورود به تورینو</h4>
       <form
         className="flex flex-col justify-end gap-10 flex-1"
@@ -43,7 +49,7 @@ function SendOTPForm({ mobile, setMobile, setStep }) {
         <label>شماره موبایل خود را وارد کنید</label>
         <input
           type="text"
-          placeholder="۰۹۱۲۳۳۳****"
+          placeholder="۰۹۱۲۳۳۳**** (زبان صفحه کلید انگلیسی باشد"
           className="h-11 rounded-md border border-[#00000037]"
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}

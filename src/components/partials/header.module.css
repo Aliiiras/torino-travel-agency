@@ -1,0 +1,20 @@
+
+.navlist{
+    display: flex;
+    gap:40px;
+    margin-left: auto;
+    margin-right: 80px;
+}
+.navlist :active{
+    color: #079616;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoimg{
+    margin: 10px 50px 10px 0;
+    width: 146px;
+    height: 44px;
+}
