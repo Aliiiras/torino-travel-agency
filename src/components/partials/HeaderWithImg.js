@@ -1,4 +1,4 @@
-import styles from "@/components/HeaderWithImg.module.css"
+import styles from "@/components/partials/HeaderWithImg.module.css"
 import Image from "next/image";
 
 function HeaderWithImg() {

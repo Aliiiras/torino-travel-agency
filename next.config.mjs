@@ -6,7 +6,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: ['localhost'], // Faqat hostname
+      domains: ['localhost'], 
       remotePatterns: [
         {
           protocol: 'http',

@@ -5,7 +5,7 @@ import OtpInput from "react18-input-otp";
 
 import { useCheckOtp } from "@/core/services/mutations";
 
-function CheckOTPForm({ mobile, setStep, setIsOpen, backToSendOTP }) {
+function CheckOTPForm({ mobile, setStep, setIsOpen }) {
   const [code, setCode] = useState("");
 
   const { isPending, mutate } = useCheckOtp();
@@ -35,13 +35,15 @@ function CheckOTPForm({ mobile, setStep, setIsOpen, backToSendOTP }) {
 
   return (
     <div className="flex flex-col w-[358px] h-[362px] bg-white rounded-[20px] shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] p-6">
-      <button onClick={backToSendOTP}>backk</button>
       <h4 className="text-xl font-bold text-center">کد تایید را وارد کنید.</h4>
       <form
         className="flex flex-col justify-end gap-10 flex-1"
         onSubmit={checkOtpHandler}
       >
-        <label>شماره موبایل {mobile}</label>
+        <label>شماره موبایل  {mobile} <button
+        className="text-green-600 self-start"
+        onClick={() => setStep(1)}
+      >  ویرایش </button></label>
         <div style={{ direction: "ltr" }}>
           <OtpInput
             value={code}

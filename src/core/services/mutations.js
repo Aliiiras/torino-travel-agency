@@ -35,16 +35,28 @@ const useUpdateBankAccount = () => {
   return useMutation({ mutationFn, onSuccess });
 };
 
-// const useDeleteProduct = () => {
-//   const queryClient = useQueryClient();
+const useAddToBasket = () => {
+  const mutationFn = (id) => api.put(`basket/${id}`);
 
-//   const mutationFn = (data) => api.delete("products", data);
+  return useMutation({ mutationFn });
+};
 
-//   const onSuccess = async () => {
-//     await queryClient.invalidateQueries({ queryKey: ["all-products"] });
-//   };
+const useCheckout = () => {
+  const queryClient = useQueryClient();
 
-//   return useMutation({ mutationFn, onSuccess });
-// };
+  const mutationFn = (data) => api.post("order", data);
 
-export { useSendOtp, useCheckOtp, useUpdateBankAccount };
+  const onSuccess = () => {
+    queryClient.invalidateQueries({ queryKey: ["user/tours"] });
+  };
+
+  return useMutation({ mutationFn, onSuccess });
+};
+
+export {
+  useSendOtp,
+  useCheckOtp,
+  useUpdateBankAccount,
+  useAddToBasket,
+  useCheckout,
+};

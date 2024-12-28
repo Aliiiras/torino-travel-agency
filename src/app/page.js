@@ -1,16 +1,20 @@
 import ModalContainer from "@/components/partials/container/ModalContainer";
-import AuthForm from "@/components/partials/provider/AuthProvider";
-import HeaderWithImg from "@/components/HeaderWithImg";
+import AuthForm from "@/components/templates/authForm";
+import HeaderWithImg from "@/components/partials/HeaderWithImg";
 import Header from "@/components/partials/Header"
-import Footer from "@/components/Footer";
-import Tours from "@/components/Tours";
+import Footer from "@/components/partials/Footer";
+import Tour from "@/components/Tour";
 import styles from "@/app/page.module.css"
 import Image from "next/image";
-import Slider from "@/components/templates/Sider";
+import Slider from "@/components/partials/Sider";
+import { serverFetch } from "@/core/services/http";
+import Tours from "@/components/Tours";
 
 
 
-export default function Home() {
+export default async function Home({ searchParams }) {
+  ///fetching tour list (by card)
+  const data = await serverFetch("tour", searchParams, { cache: "no-store" });
   return (
     <div>
       <div className={styles.header} >
@@ -18,7 +22,8 @@ export default function Home() {
       <HeaderWithImg/>
       </div>
       <ModalContainer />
-      <Tours/>
+      <Tours />
+      <Tour toursData={data}/>
       <div className={styles.telbuy}>
         
         <div className={styles.telbuyr}>
@@ -32,7 +37,8 @@ export default function Home() {
         </div>
         <div className={styles.telbuyl}>
           <div className={styles.calling}>
-            <h2>021-1840</h2>
+            <h2><span className="numbers">021-1840
+            </span></h2>
             <Image className={styles.telimg} src="/ico/call.png" width={30} height={30} alt="call"/>
           </div>
             <button className={styles.moreinfo}>
@@ -68,7 +74,7 @@ export default function Home() {
             </div>
             <div className={styles.futurestxt}>
               <h3>پشتیبانی</h3>
-              <h5>پشتیبانی و همراهی 24 ساعته در تمامی مراحل سفر شما.</h5>
+              <h5>پشتیبانی و همراهی<span className="numbers">24</span>  ساعته در تمامی مراحل سفر شما.</h5>
             </div>
           </div>
           <div className={styles.futureskids}>
@@ -77,7 +83,7 @@ export default function Home() {
             </div>
             <div className={styles.futurestxt}>
               <h3>رضایت کاربران</h3>
-              <h5>رضایت بیش از 10هزار کاربر از تور های ما. </h5>
+              <h5>رضایت بیش از <span className="numbers">10</span> هزار کاربر از تور های ما. </h5>
             </div>
           </div>
         </div>

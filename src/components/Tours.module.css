@@ -1,6 +1,8 @@
 .intro{
     text-align: center;
-    font-weight: 900;
+    font-weight: 600;
+    line-height: 44px;
+    font-size: 28px;
     padding: 15px;
 }
 .search{
@@ -9,45 +11,21 @@
     height: 71px;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    padding: 5px;
+    padding: 8px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+.inputico{
+    padding-right: 30px;
+    margin: 5px;
+    height: 51px;
+    width: 220px;
+    outline: none;
 }
 .search input{
-    margin: 5px;
+    width: 210px;
     height: 51px;
-    width: 205px;
-    outline: none;
-}
-.inputwrapper{
-    position: relative;
-}
-.inputwrapper .inputico{
-    padding-right: 30px;
-    border-right: 1px solid rgba(0, 0, 0, 0.15);
-    margin: 5px;
-    height: 51px;
-    width: 205px;
-    outline: none;
-}
-.inputwrapper:first-child .inputico{
-    border-right: none;
-}
-.ico{
-    position: absolute;
-    right: 10px;
-    top: 40%;
-}
-.search button{
-    width: 190px;
-    height: 51px;
-    background-color: rgba(40, 167, 69, 1);
     border-radius: 16px;
-    padding: 8px;
     color: aliceblue;
-}
-.ico{
-    width: 15px;
-    height: 15px;
-
 }

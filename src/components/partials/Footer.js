@@ -1,5 +1,5 @@
 import Image from "next/image"
-import styles from "@/components/Footer.module.css"
+import styles from "@/components/partials/Footer.module.css"
 import Swiper from 'swiper';
 import 'swiper/css';
 
@@ -26,7 +26,8 @@ function Footer() {
         <div className={styles.supportsecfooter}>
             <div className={styles.logotel}>
                 <Image src="/ico/logo.png" width={150} height={44} alt="logo" />
-                <h4>تلفن پشتیبانی:021-8574</h4>
+                <h4><span className="numbers">021-8574 </span>
+                     : تلفن پشتیبانی </h4>
             </div>
             <div className={styles.imgsupportfooter}>
                 <Image className={styles.images} src="/ico/passenger-rights-48368f81 1.png" width={50} height={50} alt="passngr" />

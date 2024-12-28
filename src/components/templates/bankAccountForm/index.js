@@ -36,6 +36,8 @@ function BankAccountForm() {
       onSubmit={handleSubmit(submitHandler)}
       className="*:border-2 *:border-gray-300 *:rounded-lg *:m-2 *:p-1"
     >
+    <div className="border-2 border-gray-300">
+
       <input {...register("shaba_code")} placeholder="شماره شبا" />
       {!!errors?.shaba_code && <span>{errors?.shaba_code?.message}</span>}
       <input {...register("debitCard_code")} placeholder="شماره کارت" />
@@ -52,6 +54,7 @@ function BankAccountForm() {
         type="submit"
         className="!bg-green-500 text-xs p-2 text-white !border-0"
       />
+      </div>
     </form>
   );
 }

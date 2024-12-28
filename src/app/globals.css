@@ -15,6 +15,17 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'vazir';
+  src: url('../app/fonts/Vazir-FD-WOL.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.numbers {
+  font-family: 'vazir', sans-serif !important; /* جایگزین با نام فونت شما */
+  font-feature-settings: 'lnum' 0, 'tnum' 0 !important; /* غیرفعال کردن اعداد انگلیسی */
+}
+
 html, body {
   font-family: 'YekanBakh', 'YekanBakh-Heavy', sans-serif;
 }
@@ -29,4 +40,6 @@ html, body {
 .custom-calendar .rmdp-arrow-container {
   @apply bg-blue-500 w-7 h-7 px-4 py-2 rounded-lg hover:bg-blue-600 text-white  !important; /* دکمه‌ها */
 }
-
+.loginbtn{
+  @apply bg-white w-28 h-10 rounded-lg border-2 border-green-600 text-green-600;
+}

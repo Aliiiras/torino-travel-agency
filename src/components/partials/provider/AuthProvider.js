@@ -1,6 +1,6 @@
 "use client";
 
-import { useGetUserData } from "@/core/services/userQueries";
+import { useGetUserData } from "@/core/services/queries";
 import { useRouter } from "next/navigation";
 import { useEffect,useState } from "react";
 import ModalContainer from "../container/ModalContainer";
@@ -8,22 +8,22 @@ import ModalContainer from "../container/ModalContainer";
 function AuthProvider({ children }) {
   const router = useRouter();
   const { isPending, data } = useGetUserData();
-
+//////////////////
   const [isModalOpen, setIsModalOpen] = useState(false);
-
 
   const handleButton = () => {
     if (!data?.data?.name) {
-      setIsModalOpen(true); // مودال رو باز کن
+      setIsModalOpen(true); 
     }
   };
-
+//////////////////
   useEffect(() => {
     if (!isPending && !data?.data) router.push("/");
   }, [isPending]);
 
   if (isPending)
     return (
+  //////////////////
   <>
       <button onClick={handleButton} className="px-4 py-2 bg-blue-500 text-white rounded-lg">
       {isPending ? (
@@ -37,7 +37,7 @@ function AuthProvider({ children }) {
       <ModalContainer
     isOpen={isModalOpen}
     onClose={() => setIsModalOpen(false)} />
-    </>
+    </>//////////////////
     );
 
   return children;

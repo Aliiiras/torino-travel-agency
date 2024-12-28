@@ -20,6 +20,7 @@ export default function PersianDate() {
           <input
             type="text"
             value={value}
+            onChange={(e) => setDate(e.target.value)}
             onFocus={openCalendar}
             placeholder="تاریخ"
             className="mt-[-10px] pr-7 border-r border-r-black/15 m-1.5 h-[51px] w-[205px] outline-none bottom-[20px]"

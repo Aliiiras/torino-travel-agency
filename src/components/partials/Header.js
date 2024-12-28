@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "@/components/partials/header.module.css"
 import AuthForm from "../templates/authForm/index";
-import AuthProvider from "../partials/provider/AuthProvider";
 
 function Header() {
   return (

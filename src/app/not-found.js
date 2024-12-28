@@ -1,7 +1,7 @@
 import Image from "next/image"
 import styles from "@/app/globals.css"
 import Header from "@/components/partials/Header"
-import Footer from "@/components/Footer"
+import Footer from "@/components/partials/Footer"
 
 
 function NotFound() {

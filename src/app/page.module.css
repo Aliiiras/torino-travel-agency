@@ -49,6 +49,7 @@
 .calling{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .telimg{
     width: 24px;
