@@ -42,12 +42,12 @@ const useAddToBasket = () => {
 };
 
 const useCheckout = () => {
-  const queryClient = useQueryClient();
+  const queryClient = useQueryClient(); // caching and managing data req (generally invalidating)
 
-  const mutationFn = (data) => api.post("order", data);
+  const mutationFn = (data) => api.post("order", data); //mutate
 
   const onSuccess = () => {
-    queryClient.invalidateQueries({ queryKey: ["user/tours"] });
+    queryClient.invalidateQueries({ queryKey: ["user/tours"] }); //cache update 
   };
 
   return useMutation({ mutationFn, onSuccess });

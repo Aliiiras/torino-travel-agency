@@ -22,19 +22,19 @@
   font-style: normal;
 }
 .numbers {
-  font-family: 'vazir', sans-serif !important; /* جایگزین با نام فونت شما */
-  font-feature-settings: 'lnum' 0, 'tnum' 0 !important; /* غیرفعال کردن اعداد انگلیسی */
+  font-family: 'vazir', sans-serif !important;
+  font-feature-settings: 'lnum' 0, 'tnum' 0 !important; 
 }
 
 html, body {
   font-family: 'YekanBakh', 'YekanBakh-Heavy', sans-serif;
 }
 .custom-calendar .rmdp-container {
-  @apply bg-gray-50 rounded-lg shadow-md; /* پس‌زمینه و ظاهر */
+  @apply bg-gray-50 rounded-lg shadow-md; 
 }
 
 .custom-calendar .rmdp-day span {
-  @apply text-gray-700 hover:text-white hover:bg-transparent rounded-md; /* روزها */
+  @apply text-gray-700 hover:text-white hover:bg-transparent rounded-md;
 }
 
 .custom-calendar .rmdp-arrow-container {

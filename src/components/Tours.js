@@ -22,7 +22,6 @@ function Tours() {
       const originId = getQuery("originId");
       const destinationId = getQuery("destinationId");
       if (originId && destinationId) reset({originId, destinationId})
-      console.log({ originId, destinationId });
     }, []);
   
     const submitHandler = (form) => {
